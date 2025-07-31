@@ -16,10 +16,12 @@ export function ComparisonOptions({
     <div className={`flex items-center space-x-2 ${className || ''}`}>
       <Checkbox
         id="ignore-formatting"
+        data-testid="ignore-formatting"
         checked={ignoreCaseAndWhitespace}
         onCheckedChange={onToggleIgnoreCaseAndWhitespace}
       />
       <Label
+        data-testid="ignore-formatting-label"
         htmlFor="ignore-formatting"
         className="text-sm font-medium font-sans-serif"
       >

@@ -75,7 +75,7 @@ export default function Hero() {
             ))}
           </div>
           <Button
-            className="group relative overflow-hidden px-8 py-6 text-lg font-mono font-semibold tracking-wider bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary text-primary-foreground shadow-lg hover:shadow-primary/20 transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-xl"
+            className="group relative overflow-hidden px-8 py-6 text-md font-mono font-semibold tracking-wider bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary text-primary-foreground shadow-lg hover:shadow-primary/20 transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-xl"
             size="lg"
             onClick={() => navigate('/home')}
           >
@@ -83,8 +83,9 @@ export default function Hero() {
               Get Started
               <ArrowRight className="ml-3 h-5 w-5 transition-all duration-300 group-hover:translate-x-1 group-hover:scale-110" />
             </span>
-            <span className="absolute inset-0 -z-0 bg-gradient-to-r from-primary/80 to-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-            <span className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-full bg-white/10 -rotate-12 transform origin-top transition-transform duration-700 group-hover:translate-x-[300%] group-hover:opacity-0"></span>
+            <span className="absolute inset-0 -z-10 bg-gradient-to-r from-primary/90 via-primary/80 to-primary/90 opacity-0 group-hover:opacity-100 transition-all duration-500" />
+            <span className="absolute top-0 left-0 w-full h-0.5 bg-white/30 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-700" />
+            <span className="absolute bottom-0 left-0 w-full h-0.5 bg-white/30 transform translate-x-full group-hover:translate-x-0 transition-transform duration-700" />
           </Button>
         </div>
       </div>

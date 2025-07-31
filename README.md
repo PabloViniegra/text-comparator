@@ -61,6 +61,14 @@ pnpm run build
 
 The build artifacts will be stored in the `dist/` directory.
 
+### 5. Run tests
+
+This project uses Playwright for end-to-end testing. Ensure the development server is running (`pnpm dev`) before executing the test suite.
+
+```bash
+pnpm tests
+```
+
 ## 📦 Project Structure
 
 ```

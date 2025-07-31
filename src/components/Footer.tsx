@@ -13,19 +13,18 @@ const Footer = () => {
   const [openPrivacy, setOpenPrivacy] = useState(false)
 
   return (
-    <footer className="w-full border-t border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex flex-col items-center justify-between gap-4 py-6 md:h-16 md:flex-row">
-        <p className="text-center text-sm leading-loose text-muted-foreground md:text-left font-sans-serif tracking-wide">
-          &copy; {new Date().getFullYear()} Text Comparator. All rights
-          reserved.
+    <footer className="w-full border-t border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-4">
+      <div className="mx-auto max-w-7xl w-full flex flex-col items-center justify-between gap-4 py-6 md:py-4 md:h-16 md:flex-row">
+        <p className="text-sm text-muted-foreground font-sans-serif tracking-wide">
+          &copy; {new Date().getFullYear()} Text Comparator. All rights reserved.
         </p>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-6">
           <Dialog open={openTerms} onOpenChange={setOpenTerms}>
             <DialogTrigger asChild>
               <Button
                 variant="ghost"
                 size="sm"
-                className="text-muted-foreground hover:text-foreground font-sans-serif tracking-wide"
+                className="h-8 px-3 text-muted-foreground hover:text-foreground font-sans-serif tracking-wide transition-colors"
               >
                 Terms & Conditions
               </Button>
@@ -69,7 +68,7 @@ const Footer = () => {
               <Button
                 variant="ghost"
                 size="sm"
-                className="text-muted-foreground hover:text-foreground font-sans-serif tracking-wide"
+                className="h-8 px-3 text-muted-foreground hover:text-foreground font-sans-serif tracking-wide transition-colors"
               >
                 Privacy Policy
               </Button>
