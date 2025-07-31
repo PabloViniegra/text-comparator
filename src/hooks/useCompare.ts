@@ -18,26 +18,26 @@ export default function useCompare() {
   }
 
   const compareTexts = () => {
-    // Split text into words while preserving whitespace for display
     const words1 = text1.split(/(\s+)/)
     const words2 = text2.split(/(\s+)/)
     const result: Difference[] = []
 
-    // Normalize text for comparison if ignoreFormatting is true
-    const normalizedText1 = ignoreFormatting ? text1.replace(/\s+/g, '').toLowerCase() : text1
-    const normalizedText2 = ignoreFormatting ? text2.replace(/\s+/g, '').toLowerCase() : text2
-    
-    // If we're ignoring formatting, we need to do a character-by-character comparison
+    const normalizedText1 = ignoreFormatting
+      ? text1.replace(/\s+/g, '').toLowerCase()
+      : text1
+    const normalizedText2 = ignoreFormatting
+      ? text2.replace(/\s+/g, '').toLowerCase()
+      : text2
+
     if (ignoreFormatting) {
       const maxLength = Math.max(normalizedText1.length, normalizedText2.length)
-      
+
       for (let i = 0; i < maxLength; i++) {
         const char1 = normalizedText1[i] || ''
         const char2 = normalizedText2[i] || ''
-        
+
         if (char1 === char2) {
           if (char1) {
-            // For display, we'll use the original character from text1 or text2
             const displayChar = text1[i] || text2[i] || ''
             result.push({ type: 'unchanged', text: displayChar })
           }
@@ -51,7 +51,6 @@ export default function useCompare() {
         }
       }
     } else {
-      // Original word-by-word comparison
       const maxLength = Math.max(words1.length, words2.length)
 
       for (let i = 0; i < maxLength; i++) {

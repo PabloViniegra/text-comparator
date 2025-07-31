@@ -15,8 +15,9 @@ const Footer = () => {
   return (
     <footer className="w-full border-t border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-4">
       <div className="mx-auto max-w-7xl w-full flex flex-col items-center justify-between gap-4 py-6 md:py-4 md:h-16 md:flex-row">
-        <p className="text-sm text-muted-foreground font-sans-serif tracking-wide">
-          &copy; {new Date().getFullYear()} Text Comparator. All rights reserved.
+        <p className="text-sm text-muted-foreground font-code tracking-wide font-medium text-balance">
+          &copy; {new Date().getFullYear()} Text Comparator. All rights
+          reserved.
         </p>
         <div className="flex items-center gap-6">
           <Dialog open={openTerms} onOpenChange={setOpenTerms}>

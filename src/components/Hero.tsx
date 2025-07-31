@@ -75,7 +75,7 @@ export default function Hero() {
             ))}
           </div>
           <Button
-            className="group relative overflow-hidden px-8 py-6 text-md font-mono font-semibold tracking-wider bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary text-primary-foreground shadow-lg hover:shadow-primary/20 transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-xl"
+            className="group relative overflow-hidden px-8 py-6 text-md font-code font-semibold tracking-wider bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary text-primary-foreground shadow-lg hover:shadow-primary/20 transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-xl"
             size="lg"
             onClick={() => navigate('/home')}
           >
